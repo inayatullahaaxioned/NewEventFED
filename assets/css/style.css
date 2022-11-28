@@ -262,6 +262,59 @@ address { display: inline-block; }
   line-height: 20px;
 }
 /*------------------------------------------------ overview styling end here ------------------------------------------------ */
+/*------------------------------------------------ event details section styling start here ------------------------------------------------ */
+.event-details-section {
+  padding: 85px 0;
+  background-color: var(--section-bg-color);
+  color: var(--white-color);
+}
+
+.event-info-list {
+  margin-bottom: 8px;
+  gap: 1%;
+}
+
+.event-info-item {
+  padding-right: 2%;
+  margin-right: 1%;
+  flex-basis: 32%;
+  text-align: center;
+}
+
+.info-icon,
+.event-info-title {
+  display: block;
+}
+
+.info-icon {
+  text-indent: -9999px;
+}
+
+.info-icon::before {
+  margin-bottom: 20px;
+  content: "\f0c0";
+  width: 100%;
+  color: #EF545F;
+  font-size: 40px;
+  font-family: "FontAwesome";
+  float: left;
+  text-indent: 0;
+}
+
+.watch::before { content: "\f017"; }
+.mic::before { content: "\f130";}
+
+.event-info-title {
+  margin-bottom: 21px;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.event-info {
+  font-size: 12px;
+  line-height: 20px;
+}
+/*------------------------------------------------ event details section styling end here ------------------------------------------------ */
 
 
 
