@@ -119,15 +119,21 @@ li {
 
 .heading {
   font-size: 24px;
+  font-weight: 600;
   text-transform: uppercase;
 }
-/* common styling start here*/
+
+.heading-content {
+  font-size: 13px;
+}
+/* common styling end here*/
 
 :root {
   --white-color : #fff;
   --black-color : #454545;
   --red-color : #F1545F;
   --section-bg-color : #222;
+  --secondary-bg-color : #f9f9f9;
 }
 
 /*=================================
@@ -315,6 +321,68 @@ address { display: inline-block; }
   line-height: 20px;
 }
 /*------------------------------------------------ event details section styling end here ------------------------------------------------ */
+/*------------------------------------------------ watch video section section styling start here ------------------------------------------------ */
+
+/*------------------------------------------------ watch video section section styling end here ------------------------------------------------ */
+/*------------------------------------------------ speakers section section styling start here ------------------------------------------------ */
+.speakers-section {
+  padding: 100px 0 90px;
+  background-color: var(--secondary-bg-color);
+  text-align: center;
+}
+
+.speakers-section .heading {
+  margin-bottom: 8px;
+}
+
+.speakers-list {
+  margin-top: 55px;
+  overflow: hidden;
+}
+
+.speakers-item {
+  min-width: 222px;
+}
+
+.speakers-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.speakers-info {
+  padding: 25px 0;
+  background-color: var(--white-color);
+}
+
+.speaker-name {
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.designation {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.slick-dots {
+  margin-top: 45px;
+}
+
+.slick-dots button {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 50%;
+  background-color: #8f8f8f;
+  text-indent: -9999px;
+}
+
+.slick-active button {
+  background-color: var(--section-bg-color);
+}
+/*------------------------------------------------ speakers section section styling end here ------------------------------------------------ */
+
 
 
 
