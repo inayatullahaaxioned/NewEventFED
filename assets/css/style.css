@@ -127,6 +127,7 @@ li {
   --white-color : #fff;
   --black-color : #454545;
   --red-color : #F1545F;
+  --section-bg-color : #222;
 }
 
 /*=================================
@@ -233,6 +234,34 @@ address { display: inline-block; }
   background-color: var(--red-color);
 }
 /*------------------------------------------------ banner styling end here ------------------------------------------------ */
+/*------------------------------------------------ overview styling start here ------------------------------------------------ */
+.overview-section {
+  padding: 118px 0 145px;
+}
+
+.overview-content-box {
+  padding-right: 4%;
+  margin-right: 2%;
+  flex-basis: 50%;
+}
+
+.overview-image {
+  flex-basis: 49%;
+}
+
+.overview-heading {
+  margin: 16px 0 20px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.overview-content {
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 20px;
+}
+/*------------------------------------------------ overview styling end here ------------------------------------------------ */
 
 
 
