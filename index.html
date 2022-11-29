@@ -6,7 +6,8 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="slick/slick.css">
   <link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
@@ -61,7 +62,7 @@
     <!-- banner section start -->
       <section class="banner">
         <div class="wrapper flex">
-          <video poster="assets/images/intro-bg.jpg" autoplay muted loop>
+          <video class="banner-video" poster="assets/images/intro-bg.jpg" autoplay muted loop>
             <source src="assets/images/EventVideo.mp4" type="video/mp4">
           </video>
           <div class="banner-content">
@@ -196,7 +197,7 @@
     <section class="programs-section">
       <div class="wrapper">
         <h3 class="heading">Our Programs</h3>
-        <p class="heading-content">uisque ut libero sapien. integer tellus nisl. efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
+        <p class="heading-content">Quisque ut libero sapien. integer tellus nisl. efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
         <ul class="program-tab-list">
           <li class="tab-item" data-tab="one">
             <a href="#FIXME" title="First Day">First Day</a>
@@ -218,7 +219,7 @@
                 <span class="time">09.00 AM</span>
                 <span class="room-no">Room 240</span>
               </div>
-              <h4 class="program name">
+              <h4 class="program-name">
                 <a href="#FIXME" title="Introduction to Design">Introduction to Design</a>
               </h4>
               <h5 class="program-speaker">By Jenny Green</h5>
@@ -234,7 +235,7 @@
                 <span class="time">10.00 AM</span>
                 <span class="room-no">Room 360</span>
               </div>
-              <h4 class="program name">
+              <h4 class="program-name">
                 <a href="#FIXME" title="Front-End Development">Front-End Development</a>
               </h4>
               <h5 class="program-speaker">By Johnathan Mark</h5>
@@ -250,7 +251,7 @@
                 <span class="time">11.00 AM</span>
                 <span class="room-no">Room 450</span>
               </div>
-              <h4 class="program name">
+              <h4 class="program-name">
                 <a href="#FIXME" title="Social Media Marketing">Social Media Marketing</a>
               </h4>
               <h5 class="program-speaker">By Johnathan Doe</h5>
@@ -266,7 +267,7 @@
                 <span class="time">11.00 AM</span>
                 <span class="room-no">Room 450</span>
               </div>
-              <h4 class="program name">
+              <h4 class="program-name">
                 <a href="#FIXME" title="Social Media Marketing">Social Media Marketing</a>
               </h4>
               <h5 class="program-speaker">By Johnathan Doe</h5>
@@ -282,7 +283,7 @@
                 <span class="time">09.00 AM</span>
                 <span class="room-no">Room 240</span>
               </div>
-              <h4 class="program name">
+              <h4 class="program-name">
                 <a href="#FIXME" title="Introduction to Design">Introduction to Design</a>
               </h4>
               <h5 class="program-speaker">By Jenny Green</h5>
@@ -298,7 +299,7 @@
                 <span class="time">10.00 AM</span>
                 <span class="room-no">Room 360</span>
               </div>
-              <h4 class="program name">
+              <h4 class="program-name">
                 <a href="#FIXME" title="Front-End Development">Front-End Development</a>
               </h4>
               <h5 class="program-speaker">By Johnathan Mark</h5>
@@ -314,7 +315,7 @@
                 <span class="time">10.00 AM</span>
                 <span class="room-no">Room 360</span>
               </div>
-              <h4 class="program name">
+              <h4 class="program-name">
                 <a href="#FIXME" title="Front-End Development">Front-End Development</a>
               </h4>
               <h5 class="program-speaker">By Johnathan Mark</h5>
@@ -330,7 +331,7 @@
                 <span class="time">11.00 AM</span>
                 <span class="room-no">Room 450</span>
               </div>
-              <h4 class="program name">
+              <h4 class="program-name">
                 <a href="#FIXME" title="Social Media Marketing">Social Media Marketing</a>
               </h4>
               <h5 class="program-speaker">By Johnathan Doe</h5>
@@ -346,7 +347,7 @@
                 <span class="time">09.00 AM</span>
                 <span class="room-no">Room 240</span>
               </div>
-              <h4 class="program name">
+              <h4 class="program-name">
                 <a href="#FIXME" title="Introduction to Design">Introduction to Design</a>
               </h4>
               <h5 class="program-speaker">By Jenny Green</h5>
@@ -362,7 +363,7 @@
       <div class="wrapper flex">
         <div class="register-content">
           <h3 class="heading">Register Here</h3>
-          <p class="register-info bold">Nunc eu nibh vel augue mollis tincidunt id efficitur hendrerit.</p>
+          <p class="register-info bold">Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit.</p>
           <p class="register-info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet onsectetuer diam nonummy.</p>
         </div>
         <form action="#FIXME" method="post" class="register-form form" novalidate>
@@ -388,47 +389,52 @@
       <div class="wrapper">
         <h3 class="heading">Do You Have questions?</h3>
         <p class="heading-content">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet</p>
+        <ul class="faq-list flex">
+          <li class="faq-item">
+            <h4 class="question">
+              <a href="#FIXME" title="What is Responsive Design?">What is Responsive Design?</a>
+            </h4>
+            <div class="answer">
+              <p class="faq-answer">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+              <p class="faq-answer"> Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
+            </div>
+          </li>
+          <li class="faq-item">
+            <h4 class="question">
+              <a href="#FIXME" title="What are latest UX Developments?">What are latest UX Developments?</a>
+            </h4>
+            <div class="answer">
+              <p class="faq-answer">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+              <p class="faq-answer"> Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
+            </div>
+          </li>
+          <li class="faq-item">
+            <h4 class="question">
+              <a href="#FIXME" title="What things about Social Media will be discussed?">What things about Social Media will be discussed?</a>
+            </h4>
+            <div class="answer">
+              <p class="faq-answer">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
+              <p class="faq-answer"> Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
+            </div>
+          </li>
+        </ul>
       </div>
-      <ul class="faq-list flex">
-        <li class="faq-item">
-          <h4 class="question">
-            <a href="#FIXME" title="What is Responsive Design?">What is Responsive Design?</a>
-          </h4>
-          <div class="answer">
-            <p class="faq-answer answer">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
-            <p class="faq-answer"> Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
-          </div>
-        </li>
-        <li class="faq-item">
-          <h4 class="question">
-            <a href="#FIXME" title="What are latest UX Developments?">What are latest UX Developments?</a>
-          </h4>
-          <div class="answer">
-            <p class="faq-answer answer">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
-            <p class="faq-answer"> Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
-          </div>
-        </li>
-        <li class="faq-item">
-          <h4 class="question">
-            <a href="#FIXME" title="What things about Social Media will be discussed?">What things about Social Media will be discussed?</a>
-          </h4>
-          <div class="answer">
-            <p class="faq-answer answer">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
-            <p class="faq-answer"> Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
-          </div>
-        </li>
-      </ul>
     </section>
     <!-- questions FAQ section end  -->
     <!-- venue section start  -->
     <section class="venue-section">
       <div class="wrapper">
-        <h3 class="heading">Venue</h3>
-        <p class="venue-info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
-        <address>
-          <span class="event-name">New Event</span>
-          120 Market Street, Suite 110 San Francisco, CA 10110 Tel: <a href="tel:0100200120" class="venue-call" title="010-020-0120">010-020-0120</a>
-        </address>
+        <div class="venue-content">
+          <h3 class="heading">Venue</h3>
+          <p class="venue-info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+          <div class="venue-address">
+            <span class="event-name">New Event</span>
+            <address>120 Market Street, Suite 110 San Francisco, CA 10110</address>
+            <div class="call">Tel:
+              <a class="call-cta" href="tel:0100200120" title="010-020-0120">010-020-0120</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- venue section end  -->
@@ -472,7 +478,7 @@
             <input type="text" name="Name" class="name" placeholder="Name">
           </div>
           <div class="input-box">
-            <input type="email" name="Email" class="email" placeholder="Name">
+            <input type="email" name="Email" class="email" placeholder="Email">
           </div>
           <div class="input-box">
             <textarea name="Message" class="message" placeholder="Message"></textarea>
