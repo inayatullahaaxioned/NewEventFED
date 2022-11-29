@@ -546,8 +546,8 @@ address {
   font-size: 12px;
   line-height: 22px;
 }
-/*------------------------------------------------ programs section section styling end here ------------------------------------------------ */
-/*------------------------------------------------ register section section styling start here ------------------------------------------------ */
+/*------------------------------------------------ programs  section styling end here ------------------------------------------------ */
+/*------------------------------------------------ register  section styling start here ------------------------------------------------ */
 .register-section {
   padding: 110px 0;
   background: url(../images/register-bg.jpg) center no-repeat;
@@ -608,9 +608,61 @@ address {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+/*------------------------------------------------ register section  styling end here ------------------------------------------------ */
+/*------------------------------------------------ faq/qeustion  section styling start here ------------------------------------------------ */
+.questions-section {
+  padding: 80px 0 72px;
+  background-color: #f9f9f9;
+}
 
+.questions-section .heading,
+.questions-section .heading-content {
+  text-align: center;
+}
 
-/*------------------------------------------------ register section section styling end here ------------------------------------------------ */
+.faq-list {
+  width: 83%;
+  margin: 60px auto 0;
+  flex-direction: column;
+}
+
+.faq-item {
+  margin-bottom: 8px;
+}
+
+.question {
+  padding: 10px 25px;
+  background-color: #f0f0f0;
+}
+
+.question::after {
+  content: "+";
+  float: right;
+  font-weight: 600;
+}
+
+.question.active::after {
+  content: "-";
+}
+
+.answer {
+  padding: 17px 25px;
+  background-color: var(--white-color);
+}
+
+.faq-answer {
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--black-color);
+}
+
+.question a {
+  color: var(--black-color);
+  font-size: 15px;
+  font-weight: 600;
+}
+/*------------------------------------------------ faq/qeustion  section styling end here ------------------------------------------------ */
 
 
 
