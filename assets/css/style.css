@@ -710,6 +710,41 @@ address {
   color: var(--black-color);
 }
 /*------------------------------------------------ venue  section styling end here ------------------------------------------------ */
+/*------------------------------------------------ sponsors  section styling start here ------------------------------------------------ */
+.sponsors-section {
+  padding: 76px 0 50px;
+}
+
+.sponsors-section .heading,
+.sponsor-content {
+  text-align: center;
+}
+
+.sponsors-section .heading {
+  font-size: 21px;
+}
+
+.sponsor-content {
+  color: var(--font-color);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.sponsors-list {
+  width: 83%;
+  margin: 40px auto 0;
+  flex-wrap: wrap;
+}
+
+.sponsors-item {
+  margin:0 2.5% 20px 0;
+  flex-basis: 23.1%;
+}
+
+.sponsors-item:nth-child(4n) {
+  margin-right: 0;
+}
+/*------------------------------------------------ sponsors  section styling end here ------------------------------------------------ */
 
 
 
