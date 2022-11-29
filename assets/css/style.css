@@ -108,7 +108,7 @@ li {
 
 /*for wrapper*/
 .wrapper {
-  width: 71.5%; 
+  width: 71.4%; 
   margin: 0 auto;
 }
 
@@ -265,7 +265,7 @@ address {
 }
 
 .overview-content-box {
-  padding-right: 4%;
+  padding-right: 2%;
   margin-right: 2%;
   flex-basis: 50%;
 }
@@ -276,13 +276,14 @@ address {
 
 .overview-heading {
   margin: 16px 0 20px;
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 600;
   line-height: 30px;
 }
 
 .overview-content {
   margin-bottom: 10px;
+  color: var(--font-color);
   font-size: 12px;
   line-height: 20px;
 }
