@@ -663,6 +663,53 @@ address {
   font-weight: 600;
 }
 /*------------------------------------------------ faq/qeustion  section styling end here ------------------------------------------------ */
+/*------------------------------------------------ venue  section styling start here ------------------------------------------------ */
+.venue-section {
+  padding: 72px 0 68px;
+  background: url(../images/venue-bg.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.venue-info {
+  margin: 15px 0;
+  color: var(--font-color);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.venue-content {
+  width: 83%;
+  margin: 0 auto;
+  padding-right: 42%;
+}
+
+.venue-address {
+  padding-right: 5%;
+}
+
+.venue-address .event-name {
+  margin-bottom: 2px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.venue-address address {
+  padding-right: 35%;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 25px;
+}
+
+.call {
+  font-weight: 600;
+}
+
+.call-cta {
+  color: var(--black-color);
+}
+/*------------------------------------------------ venue  section styling end here ------------------------------------------------ */
 
 
 
