@@ -117,9 +117,10 @@ body { font-family: 'Poppins', sans-serif; }
 .flex { display: flex; }
 
 .heading {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .heading-content { font-size: 13px; }
@@ -127,7 +128,7 @@ body { font-family: 'Poppins', sans-serif; }
 
 :root {
   --white-color : #fff;
-  --black-color : #454545;
+  --black-color : #333;
   --red-color : #F1545F;
   --section-bg-color : #222;
   --secondary-bg-color : #f9f9f9;
@@ -346,7 +347,36 @@ address {
 }
 /*------------------------------------------------ event details section styling end here ------------------------------------------------ */
 /*------------------------------------------------ watch video section section styling start here ------------------------------------------------ */
+.watch-video {
+  padding: 82px 0;
+}
 
+.watch-video-content .heading {
+  margin: 14px 0;
+}
+
+.watch-video-content {
+  flex-basis: 52%;
+}
+
+.video {
+  flex-basis: 49%;
+}
+
+.video-info.bold {
+  margin-bottom: 18px;
+  color: var(--black-color);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+
+.video-info {
+  color: var(--font-color);
+  font-size: 12px;
+  line-height: 20px;
+}
 /*------------------------------------------------ watch video section section styling end here ------------------------------------------------ */
 /*------------------------------------------------ speakers section section styling start here ------------------------------------------------ */
 .speakers-section {
