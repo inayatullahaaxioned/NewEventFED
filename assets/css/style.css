@@ -547,6 +547,70 @@ address {
   line-height: 22px;
 }
 /*------------------------------------------------ programs section section styling end here ------------------------------------------------ */
+/*------------------------------------------------ register section section styling start here ------------------------------------------------ */
+.register-section {
+  padding: 110px 0;
+  background: url(../images/register-bg.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--white-color);
+}
+
+.register-section .heading {
+  margin: 14px 0 10px;
+}
+
+.register-content {
+  margin-right: 3%;
+  flex-basis: 57%;
+}
+
+.register-form {
+  margin-bottom: 12px;
+  flex-basis: 40%;
+}
+
+.register-info {
+  color: var(--font-color);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.register-info.bold {
+  margin-bottom: 22px;
+  color: var(--white-color);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+
+.input-group input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid var(--white-color);
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+}
+
+.register-btn {
+  padding: 14px 51px;
+  margin: 7px 0;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  position: relative;
+  left: 52.5%;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+/*------------------------------------------------ register section section styling end here ------------------------------------------------ */
 
 
 
