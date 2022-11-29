@@ -6,6 +6,7 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="slick/slick.css">
   <link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
@@ -43,7 +44,7 @@
               <a href="#FIXME" class="nav-item" title="Sponsors">Sponsors</a>
             </li>
             <li>
-              <a href="#FIXME" class="nav-item" title="Contact">Contact</a>
+              <a href="#FIXME" class="nav-item contact-nav" title="Contact">Contact</a>
             </li>
           </ul>
           <div class="hamburger">
@@ -59,12 +60,12 @@
     <main class="main">
     <!-- banner section start -->
       <section class="banner">
-        <div class="wrapper">
-          <video controls autoplay>
-            <source src="" type="video/mp4">
+        <div class="wrapper flex">
+          <video poster="assets/images/intro-bg.jpg" autoplay muted loop>
+            <source src="assets/images/EventVideo.mp4" type="video/mp4">
           </video>
           <div class="banner-content">
-            <span class="event-date">July 22 - 26 in <address>San Francisco, CA</address></span>
+            <div class="event-date">July 22 - 26 in <address>San Francisco, CA</address></div>
             <h2 class="banner-heading">Web Design Conference</h2>
             <div class="banner-cta">
               <a href="#FIXME" class="learn-cta" title="Learn More">Learn More</a>
@@ -98,7 +99,7 @@
             <p class="event-info">Quisque ut libero sapien. integer tellus nisl. efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
           </li>
           <li class="event-info-item">
-            <span class="info-icon watch">Watch Icon</span>
+            <span class="info-icon watch fa-clock-nine">Watch Icon</span>
             <span class="event-info-title">24 Programs</span>
             <p class="event-info">Quisque ut libero sapien. integer tellus nisl. efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
           </li>
@@ -121,7 +122,7 @@
         </div>
         <div class="video">
           <figure>
-            <img src="" alt="Video image">
+            <img src="assets/images/watch-video.png" alt="Video image">
           </figure>
         </div>
       </div>
@@ -132,7 +133,7 @@
       <div class="wrapper">
         <h3 class="heading">Creative Speakers</h3>
         <p class="heading-content">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet</p>
-        <ul class="speakers-list flex">
+        <ul class="speakers-list">
           <li class="speakers-item">
             <figure class="speaker-image">
               <img src="assets/images/speakers-img1.jpg" alt="Speaker image">
@@ -187,24 +188,6 @@
               <span class="designation">Frontend Dev</span>
             </div>
           </li>
-          <li class="speakers-item">
-            <figure class="speaker-image">
-              <img src="assets/images/speakers-img1.jpg" alt="Speaker image">
-            </figure>
-            <div class="speakers-info">
-              <h4 class="speaker-name">Jenny Green</h4>
-              <span class="designation">UI Designer</span>
-            </div>
-          </li>
-          <li class="speakers-item">
-            <figure class="speaker-image">
-              <img src="assets/images/speakers-img2.jpg" alt="Speaker image">
-            </figure>
-            <div class="speakers-info">
-              <h4 class="speaker-name">David Yoon</h4>
-              <span class="designation">Creative Director</span>
-            </div>
-          </li>
         </ul>
       </div>
     </section>
@@ -215,9 +198,15 @@
         <h3 class="heading">Our Programs</h3>
         <p class="heading-content">uisque ut libero sapien. integer tellus nisl. efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
         <ul class="program-tab-list">
-          <li class="tab-item" data-tab="one">First Day</li>
-          <li class="tab-item" data-tab="two">Second Day</li>
-          <li class="tab-item" data-tab="three">Third Day</li>
+          <li class="tab-item" data-tab="one">
+            <a href="#FIXME" title="First Day">First Day</a>
+          </li>
+          <li class="tab-item" data-tab="two">
+            <a href="#FIXME" title="Second Day">Second Day</a>
+          </li>
+          <li class="tab-item" data-tab="three">
+            <a href="#FIXME" title="Third Day">Third Day</a>
+          </li>
         </ul>
         <ul class="program-list flex">
           <li class="program-item flex" data-program="one">
@@ -389,7 +378,7 @@
           <div class="input-group">
             <input type="email" name="Email address" class="email" placeholder="Email Address">
           </div>
-          <input type="submit" class="register-btn">
+          <input type="submit" class="register-btn" value="Register">
         </form>
       </div>
     </section>
@@ -402,21 +391,27 @@
       </div>
       <ul class="faq-list flex">
         <li class="faq-item">
-          <h4 class="question">What is Responsive Design?</h4>
+          <h4 class="question">
+            <a href="#FIXME" title="What is Responsive Design?">What is Responsive Design?</a>
+          </h4>
           <div class="answer">
             <p class="faq-answer answer">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
             <p class="faq-answer"> Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
           </div>
         </li>
         <li class="faq-item">
-          <h4 class="question">What are latest UX Developments?</h4>
+          <h4 class="question">
+            <a href="#FIXME" title="What are latest UX Developments?">What are latest UX Developments?</a>
+          </h4>
           <div class="answer">
             <p class="faq-answer answer">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
             <p class="faq-answer"> Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
           </div>
         </li>
         <li class="faq-item">
-          <h4 class="question">What things about Social Media will be discussed?</h4>
+          <h4 class="question">
+            <a href="#FIXME" title="What things about Social Media will be discussed?">What things about Social Media will be discussed?</a>
+          </h4>
           <div class="answer">
             <p class="faq-answer answer">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
             <p class="faq-answer"> Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
@@ -438,7 +433,7 @@
     </section>
     <!-- venue section end  -->
     <!-- sponsors section start  -->
-    <section class="sponsors-section>
+    <section class="sponsors-section">
       <div class="wrapper">
         <h3 class="heading">Our Sponsors</h3>
         <p class="sponsor-content">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet</p>
@@ -504,7 +499,7 @@
             <a href="#FIXME" class="social-icon twitter" title="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
           </li>
           <li>
-            <a href="#FIXME" class="social-icon facebook" title="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="#FIXME" class="social-icon dribble" title="Dribble" target="_blank" rel="noopener noreferrer">Dribble</a>
           </li>
           <li>
             <a href="#FIXME" class="social-icon behance" title="Behance" target="_blank" rel="noopener noreferrer">Behance</a>
@@ -514,7 +509,7 @@
           </li>
         </ul>
         <div class="to-top-cta">
-          <a href="#FIXME" class="to-top-btn" target="To the top">To the top</a>
+          <a href="#FIXME" class="to-top-btn" title="To the top">To the top</a>
         </div>
       </div>
     </footer>
