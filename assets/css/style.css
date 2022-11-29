@@ -121,13 +121,15 @@ body {
 .flex { display: flex; }
 
 .heading {
-  font-size: 23px;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
-.heading-content { font-size: 13px; }
+.heading-content {
+  color: var(--font-color);
+  font-size: 12px;
+}
 /* common styling end here*/
 
 :root {
@@ -436,6 +438,115 @@ address {
   background-color: var(--section-bg-color);
 }
 /*------------------------------------------------ speakers section section styling end here ------------------------------------------------ */
+/*------------------------------------------------ programs section section styling start here ------------------------------------------------ */
+.programs-section {
+  padding: 93px 0 60px;
+}
+
+.programs-section .heading-content {
+  margin-bottom: 27px;
+}
+
+.program-tab-list,
+.program-list {
+  width: 83%;
+}
+
+.program-list {
+  flex-direction: column;
+}
+
+.program-item {
+  padding: 33px 0;
+  border-bottom:  3px solid #f9f9f9;
+  display: none;
+}
+
+.program-item:nth-child(3n) {
+  border-color: transparent;
+}
+
+.program-item:nth-child(1),
+.program-item:nth-child(2),
+.program-item:nth-child(3) {
+  display: flex;
+}
+
+.program-tab-list {
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-item a {
+  padding: 9px 12px;
+  color: var(--black-color);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.tab-item.active a{
+  color: var(--red-color);
+}
+
+.program-image {
+  max-width: 110px;
+  max-height: 110px;
+  margin: 0 1.7%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.program-content {
+  margin: 0 1.2%;
+}
+
+.program-name a {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black-color);
+}
+
+.time-location {
+  margin: 8px 0;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.time-location span {
+  display: inline-block;
+}
+
+.time::before,
+.room-no::before {
+  content: "\f017";
+  height: 18px;
+  font-family: "FontAwesome";
+  float: left;
+  margin-right: 3px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.room-no::before {
+  content: "\f041";
+  margin-left: 5px;
+}
+
+.program-speaker {
+  margin-bottom: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--font-color);
+}
+
+.program-info {
+  color: var(--font-color);
+  font-size: 12px;
+  line-height: 22px;
+}
+/*------------------------------------------------ programs section section styling end here ------------------------------------------------ */
 
 
 
