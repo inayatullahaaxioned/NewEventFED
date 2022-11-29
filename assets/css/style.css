@@ -301,10 +301,13 @@ address {
 }
 
 .event-info-item {
-  padding-right: 2%;
   margin-right: 1%;
   flex-basis: 32%;
   text-align: center;
+}
+
+.event-info-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .info-icon,
@@ -317,7 +320,7 @@ address {
 }
 
 .info-icon::before {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   content: "\f0c0";
   width: 100%;
   color: #EF545F;
@@ -337,6 +340,7 @@ address {
 }
 
 .event-info {
+  color: var(--font-color);
   font-size: 12px;
   line-height: 20px;
 }
