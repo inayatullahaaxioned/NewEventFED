@@ -915,3 +915,60 @@ address {
   footer styling ends here
 =================================*/
 /*media query starts*/
+/*------------------------------media query for hover effect in desktop starts here------------------------------*/
+@media only screen and (min-width: 996px) {
+  .nav-item:hover {
+    color: #66ccff;
+  }
+
+  .learn-cta:hover {
+    background-color: var(--white-color);
+    color: var(--black-color);
+  }
+
+  .register-cta:hover,
+  .register-btn:hover,
+  .download-btn:hover {
+    background-color: var(--white-color);
+    color: var(--black-color);
+  }
+
+  .tab-item a:hover {
+    border-color: #999;
+    color: var(--red-color);
+  }
+
+  .call-cta:hover {
+    color: var(--red-color);
+  }
+
+  .send-btn:hover,
+  .to-top-btn:hover {
+    background-color: var(--red-color);
+  }
+
+  .social-icon:hover::before {
+    background-color: var(--red-color);
+    color: var(--white-color);
+  }
+
+  .program-name a:hover {
+    color: var(--font-color);
+  }
+
+  .nav-item:hover,
+  .learn-cta:hover,
+  .register-cta:hover,
+  .register-btn:hover,
+  .download-btn:hover,
+  .tab-item a:hover,
+  .call-cta:hover,
+  .send-btn:hover,
+  .to-top-btn:hover,
+  .social-icon:hover::before,
+  .program-name a:hover {
+    transition: all .3s ease-in-out;
+  }
+  
+}  
+/*------------------------------media query for hover effect in desktop ends here------------------------------*/
