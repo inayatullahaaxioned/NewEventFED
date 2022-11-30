@@ -1108,6 +1108,10 @@ address {
     flex-direction: column;
     gap: 20px;
   }
+
+  .speakers-section {
+    padding: 50px 0;
+  }
 }
 /*------------------------------media query for 995px ends here------------------------------*/
 /*------------------------------media query for 768px ends here------------------------------*/
@@ -1191,6 +1195,18 @@ address {
   .video-info.bold {
     font-size: 14px;
     line-height: 25px;
+  }
+
+  .speakers-section {
+    padding: 40px 0;
+  }
+
+  .speakers-list {
+    margin-top: 30px;
+  }
+
+  .speakers-item {
+    margin-right: 0;
   }
 }
 /*------------------------------media query for 480px ends here------------------------------*/
