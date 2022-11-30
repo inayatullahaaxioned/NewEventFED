@@ -148,7 +148,7 @@ body {
 .header {
   padding: 28px 0;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   right: 0;
   left: 0;
@@ -1005,6 +1005,13 @@ address {
     width: 80%;
     align-items: center;
   }
+  
+  .banner-content {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 /*------------------------------media query for 1024px ends here------------------------------*/
 @media only screen and (max-width: 1024px) {
@@ -1013,6 +1020,11 @@ address {
 /*------------------------------media query for 1024px ends here------------------------------*/
 /*------------------------------media query for 995px ends here------------------------------*/
 @media only screen and (max-width: 995px) {
+  .header {
+    padding: 18px 0;
+    position: sticky;
+  }
+
   .hamburger {
     display: block;
     z-index: 2;
@@ -1061,16 +1073,51 @@ address {
 /*------------------------------media query for 995px ends here------------------------------*/
 /*------------------------------media query for 768px ends here------------------------------*/
 @media only screen and (max-width: 768px) {
+  .event-date {
+    font-size: 17px;
+  }
 
+  .banner-heading {
+    font-size: 28px;
+  }
+
+  .banner-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .banner-cta {
+    flex-direction: column;
+    display: flex;
+    gap: 15px;
+  }
+
+  .learn-cta {
+    margin-right: 0;
+  }
 }
 /*------------------------------media query for 768px ends here------------------------------*/
 /*------------------------------media query for 480px ends here------------------------------*/
 @media only screen and (max-width: 480px) {
+  .event-date {
+    font-size: 11px;
+  }
 
+  .banner-heading {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .learn-cta,
+  .register-cta {
+    padding: 9px 20px;
+  }
 }
 /*------------------------------media query for 480px ends here------------------------------*/
-/*------------------------------media query for 320px ends here------------------------------*/
-@media only screen and (max-width: 320px) {
-
+/*------------------------------media query for 375px ends here------------------------------*/
+@media only screen and (max-width: 375px) {
+  .learn-cta {
+    display: none;
+  }
 }
-/*------------------------------media query for 320px ends here------------------------------*/
+/*------------------------------media query for 375px ends here------------------------------*/
