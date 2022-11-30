@@ -1015,7 +1015,19 @@ address {
 }
 /*------------------------------media query for 1024px ends here------------------------------*/
 @media only screen and (max-width: 1024px) {
+  .overview-section {
+    padding: 80px 0;
+  }
 
+  .overview-section .wrapper {
+    align-items: inherit;
+  }
+
+  .overview-heading {
+    margin: 16px 0;
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
 /*------------------------------media query for 1024px ends here------------------------------*/
 /*------------------------------media query for 995px ends here------------------------------*/
@@ -1095,10 +1107,30 @@ address {
   .learn-cta {
     margin-right: 0;
   }
+
+  .overview-section {
+    padding: 50px 0;
+  }
+
+  .overview-section .wrapper {
+    flex-direction: column;
+  }
+
+  .overview-content-box {
+    margin-bottom: 20px;
+  }
 }
 /*------------------------------media query for 768px ends here------------------------------*/
 /*------------------------------media query for 480px ends here------------------------------*/
 @media only screen and (max-width: 480px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  .overview-section {
+    padding: 35px 0;
+  }
+
   .event-date {
     font-size: 11px;
   }
@@ -1118,6 +1150,14 @@ address {
 @media only screen and (max-width: 375px) {
   .learn-cta {
     display: none;
+  }
+
+  .overview-heading {
+    font-size: 17px;
+  }
+
+  .overview-content {
+    font-size: 11px;
   }
 }
 /*------------------------------media query for 375px ends here------------------------------*/
