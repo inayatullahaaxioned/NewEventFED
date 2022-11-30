@@ -1202,6 +1202,13 @@ address {
   .faq-list {
     width: 100%;
   }
+
+  .venue-section {
+    padding: 40px 0;
+  }
+  .venue-content {
+    padding-right: 20%;
+  }
 }
 /*------------------------------media query for 768px ends here------------------------------*/
 /*------------------------------media query for 480px ends here------------------------------*/
@@ -1295,6 +1302,10 @@ address {
 
   .faq-answer{
     font-size: 11px;
+  }
+
+  .venue-content {
+    padding-right: 0;
   }
 }
 /*------------------------------media query for 480px ends here------------------------------*/
