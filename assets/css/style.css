@@ -189,7 +189,7 @@ body {
   width: 25px;
   height: 3px;
   margin: 4px 0;
-  border-radius: 1px;
+  border-radius: 2px;
   display: block;
   background-color: var(--white-color);
   text-indent: -9999px;
@@ -505,7 +505,8 @@ address {
   transition: all .3s ease-in-out;
 }
 
-.tab-item.active a{
+.tab-item.active a {
+  border-color: #999;
   color: var(--red-color);
   transition: all .3s ease-in-out;
 }
@@ -546,7 +547,7 @@ address {
 .time::before,
 .room-no::before {
   content: "\f017";
-  height: 18px;
+  height: 16px;
   font-family: "FontAwesome";
   float: left;
   margin-right: 3px;
@@ -557,7 +558,7 @@ address {
 
 .room-no::before {
   content: "\f041";
-  margin-left: 5px;
+  margin-left: 8px;
 }
 
 .program-speaker {
@@ -670,6 +671,7 @@ address {
   padding: 10px 25px;
   position: relative;
   background-color: #f0f0f0;
+  cursor: pointer;
 }
 
 .question::after {
@@ -679,18 +681,19 @@ address {
   right: 5%;
   height: 100%;
   top: 50%;
+  font-size: 17px;
   transform: translateY(-10px);
-  transition: all .3s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .faq-item.active .question::after {
   content: "-";
-  transition: all .3s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .answer {
   height: 0;
-  padding: 0px 25px;
+  padding: 0 25px;
   background-color: var(--white-color);
   transition: all .5s ease-in-out;
 }
@@ -908,7 +911,6 @@ textarea + .error {
 =================================*/ 
 .footer {
   padding: 75px 0;
-  position: relative;
 }
 
 .footer .wrapper {
@@ -952,9 +954,10 @@ textarea + .error {
 .to-top-btn {
   width: 45px;
   height: 45px;
-  position: absolute;
+  display: none;
+  position: fixed;
   right: 2.5%;
-  bottom: 17px;
+  bottom: 10px;
   background-color: #222;
   text-indent: -9999px;
   transition: all .3s ease-in-out;
@@ -972,6 +975,10 @@ textarea + .error {
   font-family: "FontAwesome";
   float: left;
   text-indent: 0;
+}
+
+.to-top-btn.show {
+  display: block;
 }
 
 .template {
