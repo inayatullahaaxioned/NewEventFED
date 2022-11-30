@@ -612,6 +612,13 @@ address {
   line-height: normal;
 }
 
+.input-group {
+  position: relative;
+}
+
+.register-form .input-group .error {
+  bottom: 0;
+}
 
 .input-group input {
   padding: 10px;
@@ -865,6 +872,23 @@ address {
   text-transform: uppercase;
   transition: all .3s ease-in-out;
 }
+
+.input-box {
+  position: relative;
+}
+
+.error {
+  position: absolute;
+  z-index: 1;
+  bottom: -10px;
+  left: 0;
+  color: var(--red-color);
+  font-size: 10px;
+}
+
+textarea + .error {
+  bottom: -5px;
+}
 /*------------------------------------------------ contact  section styling end here ------------------------------------------------ */
 /*=================================
   main styling ends here
@@ -1021,6 +1045,10 @@ address {
     flex-direction: column;
     justify-content: center;
   }
+
+  .contact-section .wrapper {
+    padding: 0 8%;
+  }
 }
 /*------------------------------media query for 1280px ends here------------------------------*/
 /*------------------------------media query for 1024px starts here------------------------------*/
@@ -1138,8 +1166,13 @@ address {
   .programs-section,
   .register-section,
   .questions-section,
-  .sponsors-section {
+  .sponsors-section,
+  .contact-section {
     padding: 50px 0;
+  }
+
+  .contact-section .wrapper {
+    padding: 0;
   }
 }
 /*------------------------------media query for 995px ends here------------------------------*/
@@ -1223,7 +1256,20 @@ address {
 
   .sponsors-item:nth-child(2n) {
     margin-right: 0;
-}
+  }
+
+  .contact-heading {
+    margin: 0 0 18px;
+  }
+
+  .contact-section .wrapper {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: 85%;
+  }
 }
 /*------------------------------media query for 768px ends here------------------------------*/
 /*------------------------------media query for 480px starts here------------------------------*/
@@ -1321,6 +1367,10 @@ address {
 
   .venue-content {
     padding-right: 0;
+  }
+
+  .contact-form {
+    width: 100%;
   }
 }
 /*------------------------------media query for 480px ends here------------------------------*/
