@@ -1081,6 +1081,22 @@ address {
     flex-direction: column;
     padding-right: 1.5%;
   }
+
+  .event-details-section {
+    padding: 50px 0;
+  }
+  .event-info-list {
+    flex-wrap: wrap;
+  }
+
+  .event-info-item {
+    margin: 0 3% 25px 0;
+    flex-basis: 48%;
+  }
+  
+  .event-info-item:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 /*------------------------------media query for 995px ends here------------------------------*/
 /*------------------------------media query for 768px ends here------------------------------*/
@@ -1119,6 +1135,10 @@ address {
   .overview-content-box {
     margin-bottom: 20px;
   }
+
+  .event-info-item {
+    flex-basis: 100%;
+  }
 }
 /*------------------------------media query for 768px ends here------------------------------*/
 /*------------------------------media query for 480px ends here------------------------------*/
@@ -1143,6 +1163,10 @@ address {
   .learn-cta,
   .register-cta {
     padding: 9px 20px;
+  }
+
+  .event-info-title {
+    margin-bottom: 15px;
   }
 }
 /*------------------------------media query for 480px ends here------------------------------*/
