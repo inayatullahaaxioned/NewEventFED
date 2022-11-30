@@ -483,14 +483,12 @@ address {
   display: none;
 }
 
-.program-item:nth-child(3n) {
-  border-color: transparent;
+.program-item.active {
+  display: flex;
 }
 
-.program-item:nth-child(1),
-.program-item:nth-child(2),
-.program-item:nth-child(3) {
-  display: flex;
+.program-item:nth-child(3n) {
+  border-color: transparent;
 }
 
 .program-tab-list {
