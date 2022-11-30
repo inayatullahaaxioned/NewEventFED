@@ -1022,7 +1022,8 @@ address {
     justify-content: center;
   }
 }
-/*------------------------------media query for 1024px ends here------------------------------*/
+/*------------------------------media query for 1280px ends here------------------------------*/
+/*------------------------------media query for 1024px starts here------------------------------*/
 @media only screen and (max-width: 1024px) {
   .overview-section {
     padding: 80px 0;
@@ -1049,9 +1050,13 @@ address {
   .register-btn {
     left: 0;
   }
+
+  .sponsors-list {
+    width: 100%;
+  }
 }
 /*------------------------------media query for 1024px ends here------------------------------*/
-/*------------------------------media query for 995px ends here------------------------------*/
+/*------------------------------media query for 995px starts here------------------------------*/
 @media only screen and (max-width: 995px) {
   .header {
     padding: 18px 0;
@@ -1132,12 +1137,13 @@ address {
   .speakers-section,
   .programs-section,
   .register-section,
-  .questions-section {
+  .questions-section,
+  .sponsors-section {
     padding: 50px 0;
   }
 }
 /*------------------------------media query for 995px ends here------------------------------*/
-/*------------------------------media query for 768px ends here------------------------------*/
+/*------------------------------media query for 768px starts here------------------------------*/
 @media only screen and (max-width: 768px) {
   .event-date {
     font-size: 17px;
@@ -1209,9 +1215,18 @@ address {
   .venue-content {
     padding-right: 20%;
   }
+
+  .sponsors-item {
+    margin: 0 6% 20px 0;
+    flex-basis: 47%;
+  }
+
+  .sponsors-item:nth-child(2n) {
+    margin-right: 0;
+}
 }
 /*------------------------------media query for 768px ends here------------------------------*/
-/*------------------------------media query for 480px ends here------------------------------*/
+/*------------------------------media query for 480px starts here------------------------------*/
 @media only screen and (max-width: 480px) {
   .heading {
     font-size: 23px;
@@ -1309,7 +1324,7 @@ address {
   }
 }
 /*------------------------------media query for 480px ends here------------------------------*/
-/*------------------------------media query for 375px ends here------------------------------*/
+/*------------------------------media query for 375px starts here------------------------------*/
 @media only screen and (max-width: 375px) {
   .learn-cta {
     display: none;
