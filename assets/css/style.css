@@ -624,6 +624,7 @@ address {
   padding: 10px;
   margin-bottom: 15px;
   border: 2px solid var(--white-color);
+  color: var(--white-color);
   background-color: transparent;
   outline: none;
   width: 100%;
@@ -663,7 +664,8 @@ address {
 }
 
 .faq-item {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
+  overflow: hidden;
 }
 
 .question {
@@ -680,16 +682,25 @@ address {
   height: 100%;
   top: 50%;
   transform: translateY(-10px);
+  transition: all .3s ease-in-out;
 }
 
-.question.active::after {
+.faq-item.active .question::after {
   content: "-";
+  transition: all .3s ease-in-out;
 }
 
 .answer {
-  padding: 17px 25px;
+  height: 0;
+  padding: 0px 25px;
   background-color: var(--white-color);
-  transition: all .3s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.faq-item.active .answer {
+  height: fit-content;
+  padding: 17px 25px;
+  transition: all .5s ease-in-out;
 }
 
 .faq-answer {
