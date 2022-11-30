@@ -661,13 +661,18 @@ address {
 
 .question {
   padding: 10px 25px;
+  position: relative;
   background-color: #f0f0f0;
 }
 
 .question::after {
   content: "+";
-  float: right;
   font-weight: 600;
+  position: absolute;
+  right: 5%;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-10px);
 }
 
 .question.active::after {
@@ -1126,7 +1131,8 @@ address {
 
   .speakers-section,
   .programs-section,
-  .register-section {
+  .register-section,
+  .questions-section {
     padding: 50px 0;
   }
 }
@@ -1192,10 +1198,21 @@ address {
   .register-form {
     width: 85%;
   }
+
+  .faq-list {
+    width: 100%;
+  }
 }
 /*------------------------------media query for 768px ends here------------------------------*/
 /*------------------------------media query for 480px ends here------------------------------*/
 @media only screen and (max-width: 480px) {
+  .heading {
+    font-size: 23px;
+  }
+
+  .heading-content {
+    font-size: 11px;
+  }
   .wrapper {
     width: 90%;
   }
@@ -1270,6 +1287,14 @@ address {
 
   .register-info.bold {
     font-size: 14px;
+  }
+
+  .question a{
+    font-size: 14px;
+  }
+
+  .faq-answer{
+    font-size: 11px;
   }
 }
 /*------------------------------media query for 480px ends here------------------------------*/
