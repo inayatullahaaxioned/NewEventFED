@@ -1014,6 +1014,7 @@ address {
     display: block;
     z-index: 2;
     transition: all .3s ease-in-out;
+    cursor: pointer;
   }
 
   .hamburger.active .bar-one {
@@ -1030,12 +1031,13 @@ address {
     padding: 20px 0;
     background-color: var(--section-bg-color);
   }
-
+  
   .navbar {
     height: 0;
+    border-top: 1px solid #ddd;
     position: absolute;
     z-index: -1;
-    top: 75px;
+    top: 74px;
     left: 0;
     width: 100%;
     background: var(--section-bg-color);
