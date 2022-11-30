@@ -157,6 +157,8 @@ body {
 .header .wrapper { justify-content: space-between; }
 
 .logo {
+  position: relative;
+  z-index: 1;
   font-size: 25px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -181,12 +183,18 @@ body {
   width: 25px;
   height: 3px;
   margin: 4px 0;
+  border-radius: 1px;
   display: block;
-  background-color: var(--black-color);
+  background-color: var(--white-color);
   text-indent: -9999px;
 }
 
 .hamburger { display: none; }
+
+.header.scroll {
+  padding: 18px 0;
+  background-color: var(--section-bg-color);
+}
 /*=================================
   Header styling ends here
 =================================*/  
@@ -478,7 +486,8 @@ address {
 }
 
 .tab-item a {
-  padding: 9px 12px;
+  padding: 8px 12px;
+  border-bottom: 1px solid transparent;
   color: var(--black-color);
   font-size: 12px;
   font-weight: 600;
@@ -829,14 +838,6 @@ address {
   text-transform: uppercase;
 }
 /*------------------------------------------------ contact  section styling end here ------------------------------------------------ */
-
-
-
-
-
-
-
-
 /*=================================
   main styling ends here
 =================================*/
@@ -844,21 +845,73 @@ address {
 /*=================================
   footer styling starts here
 =================================*/ 
+.footer {
+  padding: 75px 0;
+  position: relative;
+}
 
+.footer .wrapper {
+  flex-direction: column;
+  align-items: center;
+}
 
+.footer-box {
+  margin-bottom: 10px;
+  color: var(--font-color);
+  font-size: 11px;
+}
 
+.social-icon {
+  display: inline-block;
+  text-indent: -9999px;
+}
 
+.social-icon::before {
+  content: "\f39e";
+  width: 30px;
+  height: 30px;
+  margin: 0 3px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-family: "FontAwesome";
+  font-size: 12px;
+  float: left;
+  text-indent: 0;
+  transition: all .3s ease-in-out;
+}
 
+.twitter::before { content: "\f099"; }
+.dribble::before { content: "\f17d"; }
+.behance::before { content: "\f1b4"; }
+.google::before { content: "\f0d5"; }
 
+.to-top-btn {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  right: 2.5%;
+  bottom: 17px;
+  background-color: #222;
+  text-indent: -9999px;
+}
 
+.to-top-btn::before {
+  content: "\f106";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+  font-size: 20px;
+  font-family: "FontAwesome";
+  float: left;
+  text-indent: 0;
+}
  /*=================================
   footer styling ends here
-=================================*/ 
-
+=================================*/
 /*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
