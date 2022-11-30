@@ -174,6 +174,12 @@ body {
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
+  transition: all .3s ease-in-out;
+}
+
+.nav-item.active {
+  color: #66ccff;
+  transition: all .3s ease-in-out;
 }
 
 .contact-nav { padding-right: 0; }
@@ -263,6 +269,7 @@ address {
   letter-spacing: 1px;
   font-weight: 600;
   text-transform: uppercase;
+  transition: all .3s ease-in-out;
 }
 
 .learn-cta {
@@ -376,6 +383,7 @@ address {
 
 .video {
   flex-basis: 49%;
+  cursor: pointer;
 }
 
 .video-info.bold {
@@ -492,10 +500,12 @@ address {
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
+  transition: all .3s ease-in-out;
 }
 
 .tab-item.active a{
   color: var(--red-color);
+  transition: all .3s ease-in-out;
 }
 
 .program-image {
@@ -515,6 +525,7 @@ address {
   font-size: 20px;
   font-weight: 600;
   color: var(--black-color);
+  transition: all .3s ease-in-out;
 }
 
 .time-location {
@@ -617,6 +628,7 @@ address {
   font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  transition: all .3s ease-in-out;
 }
 /*------------------------------------------------ register section  styling end here ------------------------------------------------ */
 /*------------------------------------------------ faq/qeustion  section styling start here ------------------------------------------------ */
@@ -658,6 +670,7 @@ address {
 .answer {
   padding: 17px 25px;
   background-color: var(--white-color);
+  transition: all .3s ease-in-out;
 }
 
 .faq-answer {
@@ -718,6 +731,7 @@ address {
 
 .call-cta {
   color: var(--black-color);
+  transition: all .3s ease-in-out;
 }
 /*------------------------------------------------ venue  section styling end here ------------------------------------------------ */
 /*------------------------------------------------ sponsors  section styling start here ------------------------------------------------ */
@@ -799,6 +813,7 @@ address {
   font-size: 9px;
   font-weight: 600;
   text-transform: uppercase;
+  transition: all .3s ease-in-out;
 }
 
 .contact-form .heading {
@@ -836,6 +851,7 @@ address {
   font-size: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  transition: all .3s ease-in-out;
 }
 /*------------------------------------------------ contact  section styling end here ------------------------------------------------ */
 /*=================================
@@ -896,6 +912,7 @@ address {
   bottom: 17px;
   background-color: #222;
   text-indent: -9999px;
+  transition: all .3s ease-in-out;
 }
 
 .to-top-btn::before {
@@ -910,6 +927,11 @@ address {
   font-family: "FontAwesome";
   float: left;
   text-indent: 0;
+}
+
+.template {
+  color: #66ccff;
+  transition: all .3s ease-in-out;
 }
  /*=================================
   footer styling ends here
@@ -938,7 +960,8 @@ address {
     color: var(--red-color);
   }
 
-  .call-cta:hover {
+  .call-cta:hover,
+  .template:hover {
     color: var(--red-color);
   }
 
@@ -966,9 +989,86 @@ address {
   .send-btn:hover,
   .to-top-btn:hover,
   .social-icon:hover::before,
-  .program-name a:hover {
+  .program-name a:hover,
+  .template:hover {
     transition: all .3s ease-in-out;
   }
   
 }  
 /*------------------------------media query for hover effect in desktop ends here------------------------------*/
+/*------------------------------media query for 1280px starts here------------------------------*/
+@media only screen and (max-width: 1280px) {
+  .wrapper {
+    width: 80%;
+    align-items: center;
+  }
+}
+/*------------------------------media query for 1024px ends here------------------------------*/
+@media only screen and (max-width: 1024px) {
+
+}
+/*------------------------------media query for 1024px ends here------------------------------*/
+/*------------------------------media query for 995px ends here------------------------------*/
+@media only screen and (max-width: 995px) {
+  .hamburger {
+    display: block;
+    z-index: 2;
+    transition: all .3s ease-in-out;
+  }
+
+  .hamburger.active .bar-one {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.active .bar-two { opacity: 0; }
+
+  .hamburger.active .bar-three {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+
+  .header {
+    padding: 20px 0;
+    background-color: var(--section-bg-color);
+  }
+
+  .navbar {
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: var(--section-bg-color);
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+  }
+
+  .navbar.active {
+    height: 300px;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1.5%;
+  }
+
+
+
+}
+/*------------------------------media query for 995px ends here------------------------------*/
+/*------------------------------media query for 768px ends here------------------------------*/
+@media only screen and (max-width: 768px) {
+
+}
+/*------------------------------media query for 768px ends here------------------------------*/
+/*------------------------------media query for 480px ends here------------------------------*/
+@media only screen and (max-width: 480px) {
+
+}
+/*------------------------------media query for 480px ends here------------------------------*/
+/*------------------------------media query for 320px ends here------------------------------*/
+@media only screen and (max-width: 320px) {
+
+}
+/*------------------------------media query for 320px ends here------------------------------*/
