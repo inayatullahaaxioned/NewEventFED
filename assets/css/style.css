@@ -1032,6 +1032,18 @@ address {
     font-size: 18px;
     line-height: 25px;
   }
+
+  .register-section .wrapper {
+    align-items: flex-start;
+  }
+
+  .register-info.bold {
+    font-size: 16px;
+  }
+
+  .register-btn {
+    left: 0;
+  }
 }
 /*------------------------------media query for 1024px ends here------------------------------*/
 /*------------------------------media query for 995px ends here------------------------------*/
@@ -1113,7 +1125,8 @@ address {
   }
 
   .speakers-section,
-  .programs-section {
+  .programs-section,
+  .register-section {
     padding: 50px 0;
   }
 }
@@ -1165,6 +1178,19 @@ address {
 
   .program-tab-list, .program-list {
     width: 100%;
+  }
+
+  .register-section .wrapper {
+    flex-direction: column;
+  }
+
+  .register-content {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .register-form {
+    width: 85%;
   }
 }
 /*------------------------------media query for 768px ends here------------------------------*/
@@ -1236,6 +1262,14 @@ address {
 
   .program-item {
     padding: 25px 0;
+  }
+
+  .register-form {
+    width: 100%;
+  }
+
+  .register-info.bold {
+    font-size: 14px;
   }
 }
 /*------------------------------media query for 480px ends here------------------------------*/
