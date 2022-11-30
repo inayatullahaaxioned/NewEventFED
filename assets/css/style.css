@@ -1167,7 +1167,8 @@ textarea + .error {
   .register-section,
   .questions-section,
   .sponsors-section,
-  .contact-section {
+  .contact-section,
+  .footer {
     padding: 50px 0;
   }
 
@@ -1372,6 +1373,15 @@ textarea + .error {
   .contact-form {
     width: 100%;
   }
+
+  .footer {
+    padding: 40px 0;
+  }
+
+  .to-top-btn {
+    width: 40px;
+    height: 40px;
+  }
 }
 /*------------------------------media query for 480px ends here------------------------------*/
 /*------------------------------media query for 375px starts here------------------------------*/
@@ -1386,6 +1396,10 @@ textarea + .error {
 
   .overview-content {
     font-size: 11px;
+  }
+
+  .footer-box {
+    font-size: 10px;
   }
 }
 /*------------------------------media query for 375px ends here------------------------------*/
