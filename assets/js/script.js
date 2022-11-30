@@ -4,14 +4,18 @@ Inayatullah
 //grabbing elements
 const header = document.querySelector('.header'),
     hamburger = document.querySelector('.hamburger'),
-    navbar = document.querySelector('.navbar');
+    navbar = document.querySelector('.navbar'),
+    toTopBtn = document.querySelector('.to-top-btn');
 
-//header sticky js start
+
+//header sticky js start and to-top-btn showing 
 window.addEventListener("scroll", function () {
     if (window.scrollY > header.offsetHeight + 50) {
         header.classList.add('scroll');
+        toTopBtn.classList.add('show');
     } else {
         header.classList.remove('scroll');
+        toTopBtn.classList.remove('show');
     }
 });
 //header sticky js end
@@ -22,6 +26,16 @@ hamburger.addEventListener('click', function () {
     hamburger.classList.toggle('active');
 });
 //hamburger js end
+
+//to-top-btn start
+toTopBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+})
+//to-top-btn end
 
 //speaker section responsive slider start here 
 $('.speakers-list').slick({
@@ -71,7 +85,7 @@ const tabs = document.querySelectorAll('.tab-item'),
     programs = document.querySelectorAll('.program-item');
 
 //when page loads day one program become active
-tabs[0].classList.add('active');    
+tabs[0].classList.add('active');
 programs.forEach(function (program) {
     let checkDayNo = program.getAttribute('data-program');
     if (checkDayNo == 'one') {
@@ -109,15 +123,15 @@ function showProgram(tab, dayNo) {
 const question = document.querySelectorAll('.question'),
     faqList = document.querySelectorAll('.faq-item');
 faqList[0].classList.add('active');
-question.forEach(function(faq, index) {
-    faq.addEventListener('click', function(){
+question.forEach(function (faq, index) {
+    faq.addEventListener('click', function () {
         const activeFaq = document.querySelector('.faq-item.active');
-        if(activeFaq){
+        if (activeFaq) {
             activeFaq.classList.remove('active');
         };
-        if(faqList[index].classList.contains('active')){
+        if (faqList[index].classList.contains('active')) {
             faqList[index].classList.remove('active')
-        }else{
+        } else {
             faqList[index].classList.add('active');
         }
     });
