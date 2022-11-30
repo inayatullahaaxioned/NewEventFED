@@ -516,8 +516,11 @@ address {
   max-width: 110px;
   max-height: 110px;
   margin: 0 1.7%;
-  border-radius: 50%;
   overflow: hidden;
+}
+
+.program-image img {
+  border-radius: 50%;
 }
 
 .program-content {
@@ -1109,7 +1112,8 @@ address {
     gap: 20px;
   }
 
-  .speakers-section {
+  .speakers-section,
+  .programs-section {
     padding: 50px 0;
   }
 }
@@ -1158,6 +1162,10 @@ address {
   .video-info.bold {
     font-size: 17px;
   }
+
+  .program-tab-list, .program-list {
+    width: 100%;
+  }
 }
 /*------------------------------media query for 768px ends here------------------------------*/
 /*------------------------------media query for 480px ends here------------------------------*/
@@ -1197,7 +1205,8 @@ address {
     line-height: 25px;
   }
 
-  .speakers-section {
+  .speakers-section,
+  .programs-section {
     padding: 40px 0;
   }
 
@@ -1207,6 +1216,26 @@ address {
 
   .speakers-item {
     margin-right: 0;
+  }
+
+  .program-item {
+    flex-direction: column;
+  }
+
+  .program-image {
+    margin-bottom: 20px;
+  }
+
+  .tab-item a {
+    padding: 8px 10px;
+  }
+
+  .program-info {
+    font-size: 11px;
+  }
+
+  .program-item {
+    padding: 25px 0;
   }
 }
 /*------------------------------media query for 480px ends here------------------------------*/
