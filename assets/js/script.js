@@ -128,14 +128,14 @@ faqList[0].classList.add('active');
 question.forEach(function (faq, index) {
     faq.addEventListener('click', function () {
         const activeFaq = document.querySelector('.faq-item.active');
-        if (activeFaq) {
-            activeFaq.classList.remove('active');
-        };
         if (faqList[index].classList.contains('active')) {
-            faqList[index].classList.remove('active')
+            faqList[index].classList.remove('active');
         } else {
+            if (activeFaq) {
+                activeFaq.classList.remove('active');
+            }
             faqList[index].classList.add('active');
-        }
+        };
     });
 });
 //accordian js end
@@ -153,15 +153,15 @@ video.addEventListener('click', function () {
               <source src="assets/images/watchvideo.mp4" type="video/mp4">
             </video>
           </div>`;
-          watchVideoSection.appendChild(modalContainer);
-          html.classList.add('scroll-lock');
+    watchVideoSection.appendChild(modalContainer);
+    html.classList.add('scroll-lock');
 
-          modalContainer.addEventListener('click', function(e){
-            if(!e.target.classList.contains('modal-video')){
-                modalContainer.remove();
-                html.classList.remove('scroll-lock');
-            };
-          });
-          
+    modalContainer.addEventListener('click', function (e) {
+        if (!e.target.classList.contains('modal-video')) {
+            modalContainer.remove();
+            html.classList.remove('scroll-lock');
+        };
+    });
+
 });
 //watch video section modal end
