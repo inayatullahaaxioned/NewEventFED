@@ -39,6 +39,35 @@ toTopBtn.addEventListener('click', function (e) {
 })
 //to-top-btn end
 
+//navigation js start
+const navItems = document.querySelectorAll('.navigate'),
+    sections = document.querySelectorAll('section');
+navItems.forEach(function (navMenu) {
+    navMenu.addEventListener('click', function (e) {
+        e.preventDefault();
+        const activeNav = navbar.querySelector('.active');
+        if(activeNav){
+            activeNav.classList.remove('active');
+        }
+        navbar.classList.remove('active');
+        hamburger.classList.remove('active');
+        html.classList.remove('scroll-lock');
+        navMenu.classList.add('active');
+        const sectionUrl = navMenu.getAttribute('href');
+        sections.forEach(function (section) {
+            const sectionId = section.getAttribute('id');
+            if (sectionId == sectionUrl.replace("#", "")) {
+                const sectionTop = section.getBoundingClientRect().top;
+                window.scrollBy({
+                    top: sectionTop,
+                    behavior: "smooth"
+                })
+            }
+        });
+    });
+});
+//navigation js end
+
 //speaker section responsive slider start here 
 $('.speakers-list').slick({
     dots: true,
@@ -194,7 +223,7 @@ registerForm.addEventListener('submit', function (e) {
         successMessage.className = "success-msg";
         successMessage.innerText = 'You have sucessfully registered!';
         registerForm.prepend(successMessage);
-        setTimeout(function() {
+        setTimeout(function () {
             successMessage.remove();
         }, 4000);
         registerForm.reset();
@@ -203,18 +232,18 @@ registerForm.addEventListener('submit', function (e) {
 //register form validation end here
 
 //contact section form validation start here
-contactForm.addEventListener('submit', function (e){
+contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
     validateInput(fullName, fullNameRegex);
-    validateInput(contactEmail, emailRegex, 5 , 30);
-    validateInput(message, messageRegex, 25 , 250);
+    validateInput(contactEmail, emailRegex, 5, 30);
+    validateInput(message, messageRegex, 25, 250);
     const errors = contactForm.querySelectorAll('.error');
     if (errors.length == 0) {
         const successMessage = document.createElement('span');
         successMessage.className = "success-msg";
         successMessage.innerText = 'Your message has been sent sucessfully!';
         contactForm.prepend(successMessage);
-        setTimeout(function() {
+        setTimeout(function () {
             successMessage.remove();
         }, 4000);
         contactForm.reset();
