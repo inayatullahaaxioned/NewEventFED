@@ -647,6 +647,7 @@ html.scroll-lock {
 .register-form {
   margin-bottom: 12px;
   flex-basis: 40%;
+  position: relative;
 }
 
 .register-info {
@@ -695,6 +696,12 @@ html.scroll-lock {
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: all .3s ease-in-out;
+}
+
+.success-msg {
+  position: absolute;
+  top: -25px;
+  color: green;
 }
 /*------------------------------------------------ register section  styling end here ------------------------------------------------ */
 /*------------------------------------------------ faq/qeustion  section styling start here ------------------------------------------------ */
@@ -882,6 +889,7 @@ html.scroll-lock {
 
 .contact-form {
   padding: 42px 36px;
+  position: relative;
   background-color: var(--white-color);
   flex-basis: 48%;
 }
@@ -957,6 +965,12 @@ html.scroll-lock {
 
 textarea + .error {
   bottom: -5px;
+}
+
+.contact-form .success-msg {
+  top: 15px;
+  left: 10px;
+  font-size: 14px;
 }
 /*------------------------------------------------ contact  section styling end here ------------------------------------------------ */
 /*=================================
