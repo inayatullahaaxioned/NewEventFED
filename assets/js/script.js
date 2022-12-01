@@ -46,7 +46,7 @@ navItems.forEach(function (navMenu) {
     navMenu.addEventListener('click', function (e) {
         e.preventDefault();
         const activeNav = navbar.querySelector('.active');
-        if(activeNav){
+        if (activeNav) {
             activeNav.classList.remove('active');
         }
         navbar.classList.remove('active');
@@ -59,7 +59,7 @@ navItems.forEach(function (navMenu) {
             if (sectionId == sectionUrl.replace("#", "")) {
                 const sectionTop = section.getBoundingClientRect().top;
                 window.scrollBy({
-                    top: sectionTop,
+                    top: sectionTop - 40,
                     behavior: "smooth"
                 })
             }
@@ -67,6 +67,28 @@ navItems.forEach(function (navMenu) {
     });
 });
 //navigation js end
+
+// on scroll navmenu active change 
+const navigation = document.querySelectorAll('.nav-item');
+window.onscroll = function () {
+    let attribute;
+    sections.forEach(function (section) {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 50) {
+            attribute = section.getAttribute('id');
+        }
+    });
+    navigation[0].classList.remove('active');
+    navigation.forEach(function (item) {
+        item.classList.remove('active');
+        if (item.getAttribute('href').replace('#', "") == attribute) {
+            item.classList.add('active');
+        }
+    });
+    if (scrollY <= 250) {
+        navigation[0].classList.add('active');
+    };
+}
 
 //speaker section responsive slider start here 
 $('.speakers-list').slick({
@@ -215,7 +237,7 @@ registerForm.addEventListener('submit', function (e) {
     e.preventDefault();
     validateInput(firstName, nameRegex);
     validateInput(lastName, nameRegex);
-    validateInput(phoneNo, phoneRegex);
+    validateInput(phoneNo, phoneRegex, 5, 35);
     validateInput(email, emailRegex);
     const errors = registerForm.querySelectorAll('.error');
     if (errors.length == 0) {
@@ -235,8 +257,8 @@ registerForm.addEventListener('submit', function (e) {
 contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
     validateInput(fullName, fullNameRegex);
-    validateInput(contactEmail, emailRegex, 5, 30);
-    validateInput(message, messageRegex, 25, 250);
+    validateInput(contactEmail, emailRegex, 5, 35);
+    validateInput(message, messageRegex, 10, 250);
     const errors = contactForm.querySelectorAll('.error');
     if (errors.length == 0) {
         const successMessage = document.createElement('span');
