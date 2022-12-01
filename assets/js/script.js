@@ -237,8 +237,8 @@ registerForm.addEventListener('submit', function (e) {
     e.preventDefault();
     validateInput(firstName, nameRegex);
     validateInput(lastName, nameRegex);
-    validateInput(phoneNo, phoneRegex, 5, 35);
-    validateInput(email, emailRegex);
+    validateInput(phoneNo, phoneRegex);
+    validateInput(email, emailRegex, 5 , 35);
     const errors = registerForm.querySelectorAll('.error');
     if (errors.length == 0) {
         const successMessage = document.createElement('span');
