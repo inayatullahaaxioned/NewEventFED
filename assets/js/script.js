@@ -165,3 +165,87 @@ video.addEventListener('click', function () {
 
 });
 //watch video section modal end
+
+//register form validation start here
+const registerForm = document.querySelector('.register-form'),
+    contactForm = document.querySelector('.contact-form'),
+    firstName = document.querySelector('.first-name'),
+    lastName = document.querySelector('.last-name'),
+    phoneNo = document.querySelector('.phone-number'),
+    email = document.querySelector('.email'),
+    contactEmail = document.querySelector('.contact-email'),
+    fullName = document.querySelector('.name'),
+    message = document.querySelector('.message'),
+    nameRegex = /^[A-Za-z]+$/,
+    fullNameRegex = /^[a-zA-Z]+[a-zA-Z\s]+$/,
+    phoneRegex = /^[6-9]\d{9}$/,
+    emailRegex = /^([A-Za-z][A-Za-z0-9\-\_\.]+[A-Za-z0-9])\@([A-Za-z]{2,})\.([A-Za-z]{2,})$/,
+    messageRegex = /./;
+
+registerForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    validateInput(firstName, nameRegex);
+    validateInput(lastName, nameRegex);
+    validateInput(phoneNo, phoneRegex);
+    validateInput(email, emailRegex);
+    const errors = registerForm.querySelectorAll('.error');
+    if (errors.length == 0) {
+        const successMessage = document.createElement('span');
+        successMessage.className = "success-msg";
+        successMessage.innerText = 'You have sucessfully registered!';
+        registerForm.prepend(successMessage);
+        setTimeout(function() {
+            successMessage.remove();
+        }, 4000);
+        registerForm.reset();
+    };
+});
+//register form validation end here
+
+//contact section form validation start here
+contactForm.addEventListener('submit', function (e){
+    e.preventDefault();
+    validateInput(fullName, fullNameRegex);
+    validateInput(contactEmail, emailRegex, 5 , 30);
+    validateInput(message, messageRegex, 25 , 250);
+    const errors = contactForm.querySelectorAll('.error');
+    if (errors.length == 0) {
+        const successMessage = document.createElement('span');
+        successMessage.className = "success-msg";
+        successMessage.innerText = 'Your message has been sent sucessfully!';
+        contactForm.prepend(successMessage);
+        setTimeout(function() {
+            successMessage.remove();
+        }, 4000);
+        contactForm.reset();
+    };
+})
+//contact section form validation start end
+
+
+//universal function for validating inputs
+function validateInput(input, regex, minLimit = 5, maxLimit = 20) {
+    const error = input.parentElement.querySelector('.error'),
+        inputValue = input.value.trim();
+    if (error) {
+        error.remove();
+    }
+    if (inputValue == "") {
+        appendError(input, `${input.name} is required`);
+    } else if (inputValue.length < minLimit) {
+        appendError(input, `minimum ${minLimit} character is required`);
+    } else if (inputValue.length > maxLimit) {
+        appendError(input, `maximum ${maxLimit} characters are allowed`);
+    } else if (!regex.test(inputValue)) {
+        appendError(input, `Please Enter valid ${input.name}`);
+    }
+}
+
+//append error function
+function appendError(input, errorMsg) {
+    const inputParent = input.parentElement,
+        errorSpan = document.createElement('span');
+    errorSpan.className = "error";
+    errorSpan.innerText = errorMsg;
+    inputParent.appendChild(errorSpan);
+};
