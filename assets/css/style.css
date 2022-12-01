@@ -404,6 +404,58 @@ address {
   font-size: 12px;
   line-height: 20px;
 }
+
+.modal-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transition: all .5s ease-in-out;
+}
+
+.modal-container::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .9);
+}
+
+.modal-content {
+  width: 50%;
+}
+
+.modal-video {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-close {
+  display: block;
+  text-indent: -99999px;
+  cursor: pointer;
+}
+
+.modal-close::before {
+  content: "\f00d";
+  font-family: "FontAwesome";
+  float: right;
+  text-indent: 0;
+  color: var(--white-color);
+  font-size: 22px;
+}
+
+html.scroll-lock {
+  overflow-y: hidden;
+}
 /*------------------------------------------------ watch video section section styling end here ------------------------------------------------ */
 /*------------------------------------------------ speakers section section styling start here ------------------------------------------------ */
 .speakers-section {
@@ -696,11 +748,16 @@ address {
   padding: 0 25px;
   background-color: var(--white-color);
   transition: all .5s ease-in-out;
+  box-sizing: content-box;
 }
 
 .faq-item.active .answer {
-  height: fit-content;
+  min-height: fit-content;
+  height: 120px;
   padding: 17px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   transition: all .5s ease-in-out;
 }
 
@@ -1287,6 +1344,14 @@ textarea + .error {
   .contact-form {
     width: 85%;
   }
+
+  .modal-content {
+    width: 70%;
+  }
+
+  .faq-item.active .answer {
+    height: 185px;
+  }
 }
 /*------------------------------media query for 768px ends here------------------------------*/
 /*------------------------------media query for 480px starts here------------------------------*/
@@ -1398,6 +1463,10 @@ textarea + .error {
     width: 40px;
     height: 40px;
   }
+
+  .modal-content {
+    width: 80%;
+  }
 }
 /*------------------------------media query for 480px ends here------------------------------*/
 /*------------------------------media query for 375px starts here------------------------------*/
@@ -1416,6 +1485,10 @@ textarea + .error {
 
   .footer-box {
     font-size: 10px;
+  }
+
+  .faq-item.active .answer {
+    height: 250px;
   }
 }
 /*------------------------------media query for 375px ends here------------------------------*/
