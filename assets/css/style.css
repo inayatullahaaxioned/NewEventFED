@@ -184,7 +184,6 @@ body {
 
 .contact-nav { padding-right: 0; }
 
-
 .bar {
   width: 25px;
   height: 3px;
@@ -210,8 +209,8 @@ body {
 =================================*/
 /*------------------------------------------------ banner styling start here ------------------------------------------------ */
 .banner .wrapper{
-  width: 100%;
   max-height: 694px;
+  width: 100%;
   justify-content: center;
   position: relative;
   color: var(--white-color);
@@ -219,12 +218,12 @@ body {
 }
 
 .banner-content {
+  width: 100%;
+  height: 100%;
   padding: 255px 0;
   position: absolute;
   z-index: 1;
   top: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .banner-video {
@@ -270,8 +269,8 @@ address {
   padding: 9px 35px;
   color: var(--white-color);
   font-size: 10px;
-  letter-spacing: 1px;
   font-weight: 600;
+  letter-spacing: 1px;
   text-transform: uppercase;
   transition: all .3s ease-in-out;
 }
@@ -347,9 +346,9 @@ address {
 }
 
 .info-icon::before {
-  margin-bottom: 18px;
   content: "\f0c0";
   width: 100%;
+  margin-bottom: 18px;
   color: #EF545F;
   font-size: 40px;
   font-family: "FontAwesome";
@@ -447,11 +446,11 @@ address {
 
 .modal-close::before {
   content: "\f00d";
-  font-family: "FontAwesome";
-  float: right;
-  text-indent: 0;
-  color: var(--white-color);
   font-size: 22px;
+  color: var(--white-color);
+  float: right;
+  font-family: "FontAwesome";
+  text-indent: 0;
 }
 
 html.scroll-lock {
@@ -501,9 +500,9 @@ html.scroll-lock {
 .slick-dots button {
   width: 10px;
   height: 10px;
-  margin: 0 5px;
   border: none;
   border-radius: 50%;
+  margin: 0 5px;
   background-color: #8f8f8f;
   text-indent: -9999px;
 }
@@ -581,9 +580,9 @@ html.scroll-lock {
 
 .program-name a {
   margin-bottom: 8px;
+  color: var(--black-color);
   font-size: 20px;
   font-weight: 600;
-  color: var(--black-color);
   transition: all .3s ease-in-out;
 }
 
@@ -601,12 +600,12 @@ html.scroll-lock {
 .room-no::before {
   content: "\f017";
   height: 16px;
-  font-family: "FontAwesome";
-  float: left;
   margin-right: 3px;
-  font-size: 10px;
   display: flex;
   align-items: center;
+  font-size: 10px;
+  font-family: "FontAwesome";
+  float: left;
 }
 
 .room-no::before {
@@ -616,9 +615,9 @@ html.scroll-lock {
 
 .program-speaker {
   margin-bottom: 3px;
+  color: var(--font-color);
   font-size: 11px;
   font-weight: 600;
-  color: var(--font-color);
 }
 
 .program-info {
@@ -674,21 +673,21 @@ html.scroll-lock {
 }
 
 .input-group input {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 2px solid var(--white-color);
-  color: var(--white-color);
-  background-color: transparent;
-  outline: none;
   width: 100%;
+  padding: 10px;
+  border: 2px solid var(--white-color);
+  outline: none;
+  margin-bottom: 15px;
+  background-color: transparent;
+  color: var(--white-color);
 }
 
 .register-btn {
   padding: 14px 51px;
-  margin: 7px 0;
   border: none;
-  outline: none;
   border-radius: 25px;
+  outline: none;
+  margin: 7px 0;
   position: relative;
   left: 52.5%;
   background-color: var(--red-color);
@@ -702,7 +701,7 @@ html.scroll-lock {
 .success-msg {
   position: absolute;
   top: -25px;
-  color: green;
+  color: var(--white-color);
 }
 /*------------------------------------------------ register section  styling end here ------------------------------------------------ */
 /*------------------------------------------------ faq/qeustion  section styling start here ------------------------------------------------ */
@@ -736,14 +735,14 @@ html.scroll-lock {
 
 .question::after {
   content: "+";
-  font-weight: 600;
-  position: absolute;
-  right: 5%;
   height: 100%;
+  position: absolute;
   top: 50%;
+  right: 5%;
   font-size: 17px;
-  transform: translateY(-10px);
+  font-weight: 600;
   transition: all .5s ease-in-out;
+  transform: translateY(-10px);
 }
 
 .faq-item.active .question::after {
@@ -752,16 +751,16 @@ html.scroll-lock {
 }
 
 .answer {
+  box-sizing: content-box;
   height: 0;
   padding: 0 25px;
   background-color: var(--white-color);
   transition: all .5s ease-in-out;
-  box-sizing: content-box;
 }
 
 .faq-item.active .answer {
-  min-height: fit-content;
   height: 120px;
+  min-height: fit-content;
   padding: 17px 25px;
   display: flex;
   flex-direction: column;
@@ -771,9 +770,9 @@ html.scroll-lock {
 
 .faq-answer {
   margin-bottom: 10px;
+  color: var(--black-color);
   font-size: 12px;
   line-height: 20px;
-  color: var(--black-color);
 }
 
 .question a {
@@ -799,8 +798,8 @@ html.scroll-lock {
 
 .venue-content {
   width: 83%;
-  margin: 0 auto;
   padding-right: 42%;
+  margin: 0 auto;
 }
 
 .venue-address {
@@ -922,10 +921,10 @@ html.scroll-lock {
 .message {
   width: 100%;
   padding: 10px;
-  margin-bottom: 5px;
   border: none;
-  outline: none;
   border-bottom: 1px solid #ddd;
+  outline: none;
+  margin-bottom: 5px;
   resize: none;
 }
 
@@ -970,7 +969,8 @@ textarea + .error {
 
 .contact-form .success-msg {
   top: 15px;
-  left: 10px;
+  left: 15px;
+  color: var(--section-bg-color);
   font-size: 14px;
 }
 /*------------------------------------------------ contact  section styling end here ------------------------------------------------ */
@@ -986,8 +986,8 @@ textarea + .error {
 }
 
 .footer .wrapper {
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 
 .footer-box {
@@ -1005,14 +1005,14 @@ textarea + .error {
   content: "\f39e";
   width: 30px;
   height: 30px;
-  margin: 0 3px;
   border-radius: 50%;
+  margin: 0 3px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   color: #666;
-  font-family: "FontAwesome";
   font-size: 12px;
+  font-family: "FontAwesome";
   float: left;
   text-indent: 0;
   transition: all .3s ease-in-out;
@@ -1202,15 +1202,15 @@ textarea + .error {
   }
   
   .navbar {
+    width: 100%;
     height: 0;
     position: absolute;
     z-index: -1;
     top: 73px;
     left: 0;
-    width: 100%;
     background: var(--section-bg-color);
-    transition: all .5s ease-in-out;
     overflow: hidden;
+    transition: all .5s ease-in-out;
   }
   
   .navbar.active {
@@ -1219,14 +1219,15 @@ textarea + .error {
   }
 
   .nav-list {
+    padding-left: 8%;
     display: flex;
     flex-direction: column;
-    padding-left: 8%;
   }
 
   .event-details-section {
     padding: 50px 0;
   }
+
   .event-info-list {
     flex-wrap: wrap;
   }
@@ -1281,8 +1282,8 @@ textarea + .error {
   }
 
   .banner-cta {
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     gap: 15px;
   }
 
@@ -1334,6 +1335,7 @@ textarea + .error {
   .venue-section {
     padding: 40px 0;
   }
+
   .venue-content {
     padding-right: 20%;
   }
@@ -1383,6 +1385,7 @@ textarea + .error {
   .heading-content {
     font-size: 11px;
   }
+
   .wrapper {
     width: 90%;
   }
@@ -1396,8 +1399,8 @@ textarea + .error {
   }
 
   .banner-heading {
-    font-size: 22px;
     margin-bottom: 20px;
+    font-size: 22px;
   }
 
   .learn-cta,
