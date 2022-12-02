@@ -12,40 +12,40 @@
   <link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="main-page">
   <!--container start-->
   <div class="container">
     <!--header section start-->
     <header class="header">
       <div class="wrapper flex">
         <h1 class="brand-logo">
-          <a href="index.html" class="logo">New Event</a>
+          <a href="index.html" class="logo" title="New Event">New Event</a>
         </h1>
         <nav class="navbar">
           <ul class="nav-list">
             <li>
-              <a href="#FIXME" class="nav-item active" title="Intro">Intro</a>
+              <a href="index.html" class="nav-item active" title="Intro">Intro</a>
             </li>
             <li>
-              <a href="#FIXME" class="nav-item" title="Overview">Overview</a>
+              <a href="#overview" class="nav-item navigate" title="Overview">Overview</a>
             </li>
             <li>
-              <a href="#FIXME" class="nav-item" title="Speakers">Speakers</a>
+              <a href="/speakers.html" class="nav-item" title="Speakers">Speakers</a>
             </li>
             <li>
-              <a href="#FIXME" class="nav-item" title="Programs">Programs</a>
+              <a href="#programs" class="nav-item navigate" title="Programs">Programs</a>
             </li>
             <li>
-              <a href="#FIXME" class="nav-item" title="Register">Register</a>
+              <a href="#registration" class="nav-item navigate" title="Register">Register</a>
             </li>
             <li>
-              <a href="#FIXME" class="nav-item" title="Venue">Venue</a>
+              <a href="#venue" class="nav-item navigate" title="Venue">Venue</a>
             </li>
             <li>
-              <a href="#FIXME" class="nav-item" title="Sponsors">Sponsors</a>
+              <a href="#sponsors" class="nav-item navigate" title="Sponsors">Sponsors</a>
             </li>
             <li>
-              <a href="#FIXME" class="nav-item contact-nav" title="Contact">Contact</a>
+              <a href="#contact" class="nav-item contact-nav navigate" title="Contact">Contact</a>
             </li>
           </ul>
         </nav>
@@ -77,7 +77,7 @@
       </section>
     <!-- banner section end -->
     <!-- overview section start -->
-    <section class="overview-section">
+    <section class="overview-section" id="overview">
       <div class="wrapper flex">
         <div class="overview-content-box">
           <h3 class="overview-heading">New Event is a fully responsive one-page template for events, conferences or workshops.</h3>
@@ -114,23 +114,21 @@
     </div>
     <!-- event details section end  -->
     <!-- watch video section start  -->
-    <section class="watch-video">
+    <section class="watch-video" id="watch-video">
       <div class="wrapper flex">
         <div class="watch-video-content">
           <h3 class="heading">Watch Video</h3>
           <p class="video-info bold">Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
           <p class="video-info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nomummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet consectetuer diam nomummy.</p>
         </div>
-        <div class="video">
-          <figure>
-            <img src="assets/images/watch-video.png" alt="Video image">
-          </figure>
-        </div>
+        <figure class="video">
+          <img src="assets/images/watch-video.png" alt="Video image">
+        </figure>
       </div>
     </section>
     <!-- watch video section end  -->
     <!-- speakers section start  -->
-    <section class="speakers-section">
+    <section class="speakers-section" id="speakers">
       <div class="wrapper">
         <h3 class="heading">Creative Speakers</h3>
         <p class="heading-content">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet</p>
@@ -194,7 +192,7 @@
     </section>
     <!-- speakers section end  -->
     <!-- programs section start  -->
-    <section class="programs-section">
+    <section class="programs-section" id="programs">
       <div class="wrapper">
         <h3 class="heading">Our Programs</h3>
         <p class="heading-content">Quisque ut libero sapien. integer tellus nisl. efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
@@ -359,7 +357,7 @@
     </section>
     <!-- programs section end  -->
     <!-- register section start  -->
-    <section class="register-section">
+    <section class="register-section" id="registration">
       <div class="wrapper flex">
         <div class="register-content">
           <h3 class="heading">Register Here</h3>
@@ -385,7 +383,7 @@
     </section>
     <!-- register section end  -->
     <!-- questions FAQ section start  -->
-    <section class="questions-section">
+    <section class="questions-section" id="faq">
       <div class="wrapper">
         <h3 class="heading">Do You Have questions?</h3>
         <p class="heading-content">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet</p>
@@ -422,7 +420,7 @@
     </section>
     <!-- questions FAQ section end  -->
     <!-- venue section start  -->
-    <section class="venue-section">
+    <section class="venue-section" id="venue">
       <div class="wrapper">
         <div class="venue-content">
           <h3 class="heading">Venue</h3>
@@ -439,7 +437,7 @@
     </section>
     <!-- venue section end  -->
     <!-- sponsors section start  -->
-    <section class="sponsors-section">
+    <section class="sponsors-section" id="sponsors">
       <div class="wrapper">
         <h3 class="heading">Our Sponsors</h3>
         <p class="sponsor-content">Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet</p>
@@ -461,7 +459,7 @@
     </section>
     <!-- sponsors section end  -->
     <!-- contact section start  -->
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <div class="wrapper flex">
         <div class="contact-box">
           <h4 class="contact-heading">New Event</h4>
@@ -478,7 +476,7 @@
             <input type="text" name="Name" class="name" placeholder="Name">
           </div>
           <div class="input-box">
-            <input type="email" name="Email" class="email" placeholder="Email">
+            <input type="email" name="Email" class="contact-email" placeholder="Email">
           </div>
           <div class="input-box">
             <textarea name="Message" class="message" placeholder="Message"></textarea>
