@@ -1023,6 +1023,7 @@ textarea + .error {
   margin: 0 1.3% 12px 0;
   display: none;
   flex-basis: 24%;
+  overflow: hidden;
 }
 
 .gallery-item.active {
@@ -1036,6 +1037,7 @@ textarea + .error {
 .gallery-item figure img {
   min-height: 150px;
   max-height: 150px;
+  object-fit: cover;
   transition: all .3s ease-in-out;
 }
 
@@ -1197,6 +1199,10 @@ textarea + .error {
     color: var(--font-color);
   }
 
+  .gallery-item figure img:hover {
+    transform: scale(1.2);
+  }
+
   .nav-item:hover,
   .learn-cta:hover,
   .register-cta:hover,
@@ -1263,6 +1269,18 @@ textarea + .error {
 
   .sponsors-list {
     width: 100%;
+  }
+
+  .gallery-list {
+    padding: 25px 0;
+  }
+
+  .gallery-item {
+    flex-basis: 32%;
+  }
+  
+  .gallery-item:nth-child(4n) {
+    margin-right: 1.3%;
   }
 }
 /*------------------------------media query for 1024px ends here------------------------------*/
@@ -1465,6 +1483,15 @@ textarea + .error {
   .faq-item.active .answer {
     height: 185px;
   }
+
+  .gallery-item {
+    flex-basis: 48%;
+    margin-right: 4%;
+  }
+  
+  .gallery-item:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 /*------------------------------media query for 768px ends here------------------------------*/
 /*------------------------------media query for 480px starts here------------------------------*/
@@ -1586,6 +1613,14 @@ textarea + .error {
 
   .nav-list {
     padding-left: 2%;
+  }
+
+  .gallery-list {
+    padding: 25px;
+  }
+  .gallery-item {
+    flex-basis: 100%;
+    margin-right: 0;
   }
 }
 /*------------------------------media query for 480px ends here------------------------------*/
