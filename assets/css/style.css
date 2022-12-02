@@ -112,6 +112,15 @@ li {
   margin: 0 auto;
 }
 
+:root {
+  --white-color : #fff;
+  --black-color : #333;
+  --red-color : #F1545F;
+  --section-bg-color : #222;
+  --secondary-bg-color : #f9f9f9;
+  --font-color : #707070;
+}
+
 /* common styling start here*/
 body {
   color: var(--black-color);
@@ -132,16 +141,6 @@ body {
 }
 
 /* common styling end here*/
-
-:root {
-  --white-color : #fff;
-  --black-color : #333;
-  --red-color : #F1545F;
-  --section-bg-color : #222;
-  --secondary-bg-color : #f9f9f9;
-  --font-color : #707070;
-}
-
 /*=================================
   Header styling starts here
 =================================*/
@@ -154,7 +153,9 @@ body {
   left: 0;
 }
 
-.header .wrapper { justify-content: space-between; }
+.header .wrapper {
+  justify-content: space-between;
+}
 
 .logo {
   position: relative;
@@ -192,6 +193,7 @@ body {
   display: block;
   background-color: var(--white-color);
   text-indent: -9999px;
+  transition: all .3s ease-in-out;
 }
 
 .hamburger { display: none; }
@@ -235,10 +237,9 @@ body {
 .banner .wrapper::after {
   content: "";
   width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, .5);
 }
 
@@ -276,8 +277,8 @@ address {
 }
 
 .learn-cta {
-  margin-right: 9px;
   border: 2px solid var(--white-color);
+  margin-right: 9px;
 }
 
 .register-cta {
@@ -420,22 +421,31 @@ address {
 
 .modal-container::after {
   content: "";
+  width: 100%;
   position: absolute;
   z-index: -1;
   top: 0;
-  right: 0;
   bottom: 0;
-  left: 0;
   background-color: rgba(0, 0, 0, .9);
 }
 
 .modal-content {
   width: 50%;
+  animation: blowUp .5s cubic-bezier(.165, .84, .44, 1);
+}
+
+@keyframes blowUp {
+  0%{
+    transform: scale(0);
+  }
+
+  100%{
+    transform: scale(1);
+  }
 }
 
 .modal-video {
   width: 100%;
-  height: 100%;
 }
 
 .modal-close {
@@ -446,7 +456,7 @@ address {
 
 .modal-close::before {
   content: "\f00d";
-  font-size: 22px;
+  font-size: 23px;
   color: var(--white-color);
   float: right;
   font-family: "FontAwesome";
@@ -628,7 +638,7 @@ html.scroll-lock {
 /*------------------------------------------------ programs  section styling end here ------------------------------------------------ */
 /*------------------------------------------------ register  section styling start here ------------------------------------------------ */
 .register-section {
-  padding: 110px 0;
+  padding: 118px 0 108px;
   background: url(../images/register-bg.jpg) center no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -680,6 +690,16 @@ html.scroll-lock {
   margin-bottom: 15px;
   background-color: transparent;
   color: var(--white-color);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .register-btn {
@@ -1188,12 +1208,14 @@ textarea + .error {
 
   .hamburger.active .bar-one {
     transform: translateY(9px) rotate(45deg);
+    transition: all .3s ease-in-out;
   }
 
   .hamburger.active .bar-two { opacity: 0; }
 
   .hamburger.active .bar-three {
     transform: translateY(-5px) rotate(-45deg);
+    transition: all .3s ease-in-out;
   }
 
   .header {
@@ -1458,11 +1480,8 @@ textarea + .error {
     width: 100%;
   }
 
-  .register-info.bold {
-    font-size: 14px;
-  }
-
-  .question a{
+  .register-info.bold,
+  .question a {
     font-size: 14px;
   }
 
