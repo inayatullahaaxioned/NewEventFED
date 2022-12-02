@@ -8,7 +8,6 @@ const header = document.querySelector('.header'),
     toTopBtn = document.querySelector('.to-top-btn'),
     html = document.querySelector('html');
 
-
 //header sticky js start and to-top-btn showing 
 window.addEventListener("scroll", function () {
     if (window.scrollY > header.offsetHeight + 50) {
@@ -104,7 +103,7 @@ $('.speakers-list').slick({
             settings: {
                 slidesToShow: 4,
                 slidesToScroll: 1,
-                infinite: true,
+                infinite: false,
                 dots: true
             }
         },
@@ -147,7 +146,8 @@ programs.forEach(function (program) {
 });
 
 tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
+    tab.addEventListener('click', function (e) {
+        e.preventDefault();
         let dayNo = tab.getAttribute('data-tab');
         showProgram(tab, dayNo);
     })
@@ -177,7 +177,8 @@ const question = document.querySelectorAll('.question'),
     faqList = document.querySelectorAll('.faq-item');
 faqList[0].classList.add('active');
 question.forEach(function (faq, index) {
-    faq.addEventListener('click', function () {
+    faq.addEventListener('click', function (e) {
+        e.preventDefault();
         const activeFaq = document.querySelector('.faq-item.active');
         if (faqList[index].classList.contains('active')) {
             faqList[index].classList.remove('active');
@@ -193,7 +194,7 @@ question.forEach(function (faq, index) {
 
 //watch video section modal start
 const watchVideoSection = document.querySelector('.watch-video'),
-    video = document.querySelector('.video figure');
+    video = document.querySelector('.video');
 
 video.addEventListener('click', function () {
     const modalContainer = document.createElement('div');
@@ -238,17 +239,10 @@ registerForm.addEventListener('submit', function (e) {
     validateInput(firstName, nameRegex);
     validateInput(lastName, nameRegex);
     validateInput(phoneNo, phoneRegex);
-    validateInput(email, emailRegex, 5 , 35);
+    validateInput(email, emailRegex, 5, 40);
     const errors = registerForm.querySelectorAll('.error');
     if (errors.length == 0) {
-        const successMessage = document.createElement('span');
-        successMessage.className = "success-msg";
-        successMessage.innerText = 'You have sucessfully registered!';
-        registerForm.prepend(successMessage);
-        setTimeout(function () {
-            successMessage.remove();
-        }, 4000);
-        registerForm.reset();
+        showSuccessMsg(registerForm, "You have successfully registered!");
     };
 });
 //register form validation end here
@@ -257,25 +251,28 @@ registerForm.addEventListener('submit', function (e) {
 contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
     validateInput(fullName, fullNameRegex);
-    validateInput(contactEmail, emailRegex, 5, 35);
+    validateInput(contactEmail, emailRegex, 5, 40);
     validateInput(message, messageRegex, 10, 250);
     const errors = contactForm.querySelectorAll('.error');
     if (errors.length == 0) {
-        const successMessage = document.createElement('span');
-        successMessage.className = "success-msg";
-        successMessage.innerText = 'Your message has been sent sucessfully!';
-        contactForm.prepend(successMessage);
-        setTimeout(function () {
-            successMessage.remove();
-        }, 4000);
-        contactForm.reset();
+        showSuccessMsg(contactForm, "Your message has been sent sucessfully!");
     };
 })
 //contact section form validation start end
 
+function showSuccessMsg(parent, successMsg) {
+    const successMessage = document.createElement('span');
+    successMessage.className = "success-msg";
+    successMessage.innerText = successMsg;
+    parent.prepend(successMessage);
+    setTimeout(function () {
+        successMessage.remove();
+    }, 4000);
+    parent.reset();
+}
 
 //universal function for validating inputs
-function validateInput(input, regex, minLimit = 5, maxLimit = 20) {
+function validateInput(input, regex, minLimit = 3, maxLimit = 20) {
     const error = input.parentElement.querySelector('.error'),
         inputValue = input.value.trim();
     if (error) {
