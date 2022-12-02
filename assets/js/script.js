@@ -29,17 +29,17 @@ hamburger.addEventListener('click', function () {
 });
 //hamburger js end
 
-if (body.classList.contains('main-page')) {
-    //to-top-btn start
-    toTopBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    })
-    //to-top-btn end
+//to-top-btn start
+toTopBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+})
+//to-top-btn end
 
+if (body.classList.contains('main-page')) {
     //navigation js start
     const navItems = document.querySelectorAll('.navigate'),
         sections = document.querySelectorAll('section');
@@ -305,7 +305,17 @@ if (body.classList.contains('speaker-page')) {
 
     //gallery item 
     const galleryItem = document.querySelectorAll('.gallery-item'),
+    navItems = document.querySelectorAll('.nav-item'),
+    navigate = document.querySelectorAll('.navigate');
         limit = 4;
+        navItems[0].classList.remove('active');
+        navItems[2].classList.add('active');
+        navigate.forEach(function(navs){
+            navs.addEventListener('click', function(e){
+                console.log(e.target.getAttribute('href'));
+                e.preventDefault();
+            })
+        })
     if (galleryItem) {
         for (let i = 0; i < 8; i++) {
             galleryItem[i].classList.add('active');
